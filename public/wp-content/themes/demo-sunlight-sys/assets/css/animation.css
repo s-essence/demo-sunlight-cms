@@ -1,0 +1,631 @@
+@charset "utf-8";
+
+/**************************************************************
+* アニメーション設定
+**************************************************************/
+
+/* js-anima
+**************************************************************/
+.js-anima {
+  opacity: 0;
+  transition: all var(--transition-anima-speed);
+}
+
+/* js-anima
+**************************************************************/
+[data-anima-init="true"] {
+  opacity: initial;
+}
+
+
+/* 見出し
+**************************************************************/
+
+/* h2-slideFadeInBg
+********************************/
+[data-anima="h2-slideFadeIn"] .c-head-vl-2__ttl-bg {
+  width: 0;
+  transition: all var(--transition-anima-speed);
+}
+.is-show[data-anima="h2-slideFadeIn"] .c-head-vl-2__ttl-bg {
+  animation-name: h2-slideFadeInBg;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes h2-slideFadeInBg {
+  0%{
+    left: 0;
+    width: 0;
+  }
+  50%{
+    left: 0;
+    width: 100%;
+  }
+  75%{
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+  100%{
+    left: auto;
+    right: 0;
+    width: 0;
+  }
+}
+
+/* h2-slideFadeInTtl
+********************************/
+[data-anima="h2-slideFadeIn"] .c-head-vl-2__tt-txt {
+  opacity: 0;
+  transition: all var(--transition-anima-speed);
+}
+.is-show[data-anima="h2-slideFadeIn"] .c-head-vl-2__tt-txt {
+  animation-name: h2-slideFadeInTtl;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes h2-slideFadeInTtl {
+  0%{
+    opacity: 0;
+    transform: translate(-3rem, 0);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+/* h2-slideFadeInTtlJp
+********************************/
+[data-anima="h2-slideFadeIn"] .c-head-vl-2__ttl.--jp {
+  opacity: 0;
+  transition: all var(--transition-anima-speed);
+}
+.is-show[data-anima="h2-slideFadeIn"] .c-head-vl-2__ttl.--jp {
+  animation-name: h2-slideFadeInTtlJp;
+  animation-duration: .5s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes h2-slideFadeInTtlJp {
+  0%{
+    opacity: 0;
+    transform: translate(-3rem, 0);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* g-header
+**************************************************************/
+.is-open .g-header-logo {
+  animation-name: g-header-logo-show;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+@keyframes g-header-logo-show {
+  0% {
+    opacity: 0;
+    transform: translate(0, -3rem);
+  }
+  50% {
+    opacity: 0;
+    transform: translate(0, -3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+/* g-nav
+**************************************************************/
+.is-open .g-nav {
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@media all and (min-width: 768px) {
+  .is-open .g-nav {
+    animation-name: g-nav-show-pc;
+  }
+}
+@media all and (max-width: 767px) {
+  .is-open .g-nav {
+    animation-name: g-nav-show-sp;
+  }
+}
+.is-open .g-nav {
+    animation-name: g-nav-show-pc;
+  }
+  
+@keyframes g-nav-show-pc {
+  0% {
+    opacity: 0;
+    margin: 0;
+    transform: translate(-50%, -400%);
+  }
+  50% {
+    opacity: 0;
+    margin: -7.083% 0 0 15.625%;
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    opacity: 1;
+    margin: -7.083% 0 0 15.625%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes g-nav-show-sp {
+  0% {
+    opacity: 0;
+    margin-top: 0;
+  }
+  50% {
+    opacity: 0;
+    margin-top: -13.6rem;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -13.6rem;
+  }
+}
+
+
+/* mv
+**************************************************************/
+
+/* js-mvImg-01-anima
+********************************/
+.mv .js-mvImg-01-anima {
+  width: 0;
+  transition: all var(--transition-anima-speed);
+  will-change: width, animation;
+}
+
+.mv .is-show.js-mvImg-01-anima {
+  animation-name: mvImg-01-anima;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes mvImg-01-anima {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 84.375%;
+  }
+}
+
+
+/* js-mvCp-01-anima
+********************************/
+.mv .js-mvCp-01-anima {
+  opacity: 0;
+  transition: all var(--transition-anima-speed);
+  will-change: opacity, transform, animation;
+}
+.mv .is-show.js-mvCp-01-anima {
+  animation-name: mvCp-01-anima;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes mvCp-01-anima {
+  0%{
+    opacity: 0;
+    transform: translate(-3rem, 0);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+/* js-mvCp-02-anima
+********************************/
+.mv .js-mvCp-02-anima {
+  opacity: 0;
+  transition: all var(--transition-anima-speed);
+  will-change: opacity, transform, animation;
+}
+.mv .is-show.js-mvCp-02-anima {
+  animation-name: mvCp-02-anima;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes mvCp-02-anima {
+  0%{
+    opacity: 0;
+    transform: translate(-3rem, 0);
+  }
+  100%{
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+/* js-mvCp-03-anima
+********************************/
+.mv .js-mvCp-03-anima-01 {
+  width: 0;
+  transition: all var(--transition-anima-speed);
+  will-change: opacity, width, transform, animation;
+}
+.mv .is-show.js-mvCp-03-anima-01 {
+  animation-name: mvCp-03-anima-01;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+.mv .js-mvCp-03-anima-02 {
+  opacity: 0;
+  will-change: opacity, transform, animation;
+}
+
+.mv .is-show.js-mvCp-03-anima-02 {
+  opacity: 0;
+  transition: all var(--transition-anima-speed);
+}
+
+.mv .is-show.js-mvCp-03-anima-02 {
+  animation-name: mvCp-03-anima-02;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes mvCp-03-anima-01 {
+  0% {
+    opacity: 0;
+    width: 0;
+    transform: translate(-3rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    width: 100%;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes mvCp-03-anima-02 {
+  0% {
+    opacity: 0;
+    transform: translate(-3rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+/* js-mvCp-04-anima
+********************************/
+.mv .js-mvCp-04-anima {
+  opacity: 0;
+  transition: all var(--transition-anima-speed);
+}
+
+.mv .is-show.js-mvCp-04-anima {
+  animation-name: mvCp-04-anima;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes mvCp-04-anima {
+  0% {
+    opacity: 0;
+    transform: translate(-3rem, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+
+/* problems
+**************************************************************/
+
+/* problems-list
+********************************/
+.problems-list .is-show.is-float-anima {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -3rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+/* work
+**************************************************************/
+
+/* workList 
+********************************/
+.work-list [data-anima="workList"] {
+  opacity: initial;
+}
+
+/* workList item__contents
+********************************/
+.work-list [data-anima="workList"] .item__contents {
+  opacity: 0;
+}
+.work-list .is-show[data-anima="workList"] .item__contents {
+  animation-name: workListShow;
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+@keyframes workListShow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/* workList item__shape
+********************************/
+.work-list [data-anima="workList"] .item__shape {
+  width: 0;
+}
+.work-list .is-show[data-anima="workList"] .item__shape {
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+.work-list .is-show[data-anima="workList"]:nth-child(odd) .item__shape {
+  animation-name: workListLeft;
+}
+.work-list .is-show[data-anima="workList"]:nth-child(even) .item__shape {
+  animation-name: workListRight;
+}
+
+@keyframes workListLeft {
+  0% {
+    left: 0;
+    width: 0;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+  }
+
+  75% {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+
+  100% {
+    left: auto;
+    right: 0;
+    width: 0;
+  }
+}
+@keyframes workListRight {
+  0% {
+    right: 0;
+    width: 0;
+  }
+
+  50% {
+    right: 0;
+    width: 100%;
+  }
+
+  75% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  100% {
+    left: 0;
+    right: auto;
+    width: 0;
+  }
+}
+
+
+/* workList item__imgFrame
+********************************/
+.work-list [data-anima="workList"] .item__imgFrame {
+  width: 100%;
+}
+.work-list .is-show[data-anima="workList"] .item__imgFrame {
+  animation-duration: 1s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+.work-list .is-show[data-anima="workList"]:nth-child(odd) .item__imgFrame {
+  animation-name: workListBgLeft;
+}
+
+.work-list .is-show[data-anima="workList"]:nth-child(even) .item__imgFrame {
+  animation-name: workListBgRight;
+}
+
+@keyframes workListBgLeft {
+  0% {
+    left: 0;
+    width: 0;
+  }
+
+  50% {
+    left: 0;
+    width: 100%;
+  }
+
+  75% {
+    left: auto;
+    right: 0;
+    width: 100%;
+  }
+
+  100% {
+    left: auto;
+    right: 0;
+    width: 0;
+  }
+}
+@keyframes workListBgRight {
+  0% {
+    right: 0;
+    width: 0;
+  }
+
+  50% {
+    right: 0;
+    width: 100%;
+  }
+
+  75% {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  100% {
+    left: 0;
+    right: 0;
+    width: 0;
+  }
+}
+
+
+/* workList item__bg-img
+********************************/
+.work-list [data-anima="workList"] .item__bg-img {
+  opacity: 0;
+}
+.work-list .is-show[data-anima="workList"] .item__bg-img {
+  animation-name: workListShow;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+}
+
+
+/* 汎用アニメーション
+**************************************************************/
+
+/* fadeIn
+********************************/
+.is-show[data-anima="fadeIn"] {
+  opacity: 1;
+}
+
+/* fadeInLeft
+********************************/
+[data-anima="fadeInLeft"] {
+  transform: translate(-6rem, 0);
+}
+.is-show[data-anima="fadeInLeft"] {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* fadeInRight
+********************************/
+[data-anima="fadeInRight"] {
+  transform: translate(6rem, 0);
+}
+.is-show[data-anima="fadeInRight"] {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* fadeInUp
+********************************/
+[data-anima="fadeInUp"] {
+  transform: translate(0, 3rem);
+}
+.is-show[data-anima="fadeInUp"] {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* fadeInDown
+********************************/
+[data-anima="fadeInDown"] {
+  transform: translate(0, -3rem);
+}
+.is-show[data-anima="fadeInDown"] {
+  opacity: 1;
+  transform: translate(0, 0);
+}

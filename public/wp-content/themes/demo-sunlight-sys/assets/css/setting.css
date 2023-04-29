@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+
+/**************************************************************
+* 変数設定
+**************************************************************/
+
+:root {
+  --base-font-size: 62.5%;
+  --base-font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  --title-font-family: 'Work Sans', sans-serif;
+  --title-font-weight: bold;
+  --contents-width: 128rem;
+  --base-bg-color: #fff;
+  
+  --main-bg-color: #FDB86D;
+  --main-accent-color: #BF4F45;
+  --main-ttl-color: #FDB86D;
+  --main-btn-bg-color: var(--main-accent-color);
+
+  --accent-color-01: #FDB86D;
+
+  --hamberger-menu-color: #262626;
+  --hamberger-menu-hover-color: var(--main-accent-color);
+
+  --footer-bg-color: #FDB86D;
+
+  --transition-speed: .3s;
+  --transition-anima-speed: 1.5s;
+  --opacity-degree: .7;
+}
