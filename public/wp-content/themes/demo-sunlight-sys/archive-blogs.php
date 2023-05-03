@@ -51,10 +51,18 @@
           'paged' => get_query_var('paged')
         );
         ?>
-        </div>
         <?php get_template_part('template-parts/loop-posts', 'blogs', $blogs_args); ?>
+        </div>
+        <?php get_template_part('template-parts/parts-archive_pagination', 'archive_pagination'); ?>
       </div>
-      <?php get_template_part('template-parts/parts-archive_pagination', 'archive_pagination'); ?>
+      <div class="c-btn-container">
+          <div class="c-btn">
+            <a class="c-btn-link" href="<?php echo esc_url( home_url() ); ?>">
+              <span class="c-btn-lbl">HOME</span>
+              <span class="c-btn-icon"></span>
+            </a>
+          </div>
+        </div>
     </div>
   </div>
 </section>

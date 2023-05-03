@@ -972,15 +972,9 @@
     max-width: 104rem;
     margin: 0 auto;
   }
-  .front_page .c-news-container {
-    overflow-y: auto;
-    max-height: 200rem;
-  }
 }
 @media all and (max-width: 767px) {
   .c-news-container {
-    overflow-y: auto;
-    max-height: 300rem;
     margin: 0 auto;
   }
 }

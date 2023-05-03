@@ -23,6 +23,19 @@ function custom_the_posts_pagination($template) {
 }
 add_filter('navigation_markup_template', 'custom_the_posts_pagination');
 
+
+function my_plugin_allowed_block_types_all( $allowed_block_types, $block_editor_context ) {
+	// 許可するブロックタイプ
+	$allowed_block_types = array(
+		'core/paragraph',
+		// 'core/heading',
+		'core/image',
+	);
+	return $allowed_block_types;
+}
+add_filter( 'allowed_block_types_all', 'my_plugin_allowed_block_types_all', 10, 2 );
+
+
 require get_template_directory() . '/functions/form.php'; // TOPページのフォーム読み込み
 require get_template_directory() . '/functions/dashboard.php'; // ダッシュボード非表示読み込み
 require get_template_directory() . '/functions/admin-side-bar.php'; // 管理画面サイドバー非表示読み込み
