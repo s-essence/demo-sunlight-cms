@@ -46,11 +46,19 @@
           <span class="item__lbl">NEWS</span>
         </a>
       </li>
+      <?php if (is_page('concept')) : ?>
+      <li class="list__item">
+        <a class="item__link js-scroll" href="#about">
+          <span class="item__lbl">ABOUT</span>
+        </a>
+      </li>
+      <?php else : ?>
 			<li class="list__item">
 				<a class="item__link" href="<?php echo esc_url( home_url() ); ?>/concept/#about">
 					<span class="item__lbl">ABOUT</span>
 				</a>
 			</li>
+      <?php endif; ?>
       <li class="list__item">
         <a class="item__link" href="<?php echo esc_url( home_url() ); ?>/blogs/">
           <span class="item__lbl">BLOG</span>
